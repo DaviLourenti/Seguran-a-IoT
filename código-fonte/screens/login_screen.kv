@@ -1,0 +1,39 @@
+#:kivy 2.3.0
+
+<LoginScreen>:
+    name: "login"
+    username: username
+    password: password
+
+    BoxLayout:
+        orientation: "vertical"
+        padding: 50
+        spacing: 20
+
+        Label:
+            text: "Página de Login"
+            font_size: 32
+            size_hint_y: None
+            height: 50
+
+        TextInput:
+            id: username
+            hint_text: "Usuário"
+            multiline: False
+            size_hint_y: None
+            height: 40
+
+        TextInput:
+            id: password
+            hint_text: "Senha"
+            multiline: False
+            password: True
+            size_hint_y: None
+            height: 40
+
+        Button:
+            text: "Entrar"
+            size_hint_y: None
+            height: 50
+            on_press:
+                root.validate_credentials()

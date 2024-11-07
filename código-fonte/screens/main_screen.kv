@@ -1,0 +1,120 @@
+#:kivy 2.3.0
+
+<MainScreen>:
+    name: "main"
+
+    ScrollView:
+        do_scroll_x: False
+        do_scroll_y: True
+
+        GridLayout:
+            cols: 1
+            size_hint_y: None
+            height: self.minimum_height
+            padding: 20
+            spacing: 20
+
+            # Divisória IoT_Janelas
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: 10
+                id: janelas_box
+                canvas.before:
+                    Color:
+                        rgba: .9, .9, .9, 1
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Label:
+                    text: "IoT_Janelas"
+                    font_size: 24
+                    size_hint_y: None
+                    height: 40
+                    color: 0.5, 0.5, 0.5, 1 #cinza
+
+                Button:
+                    text: "Adicionar IoT_Janela"
+                    size_hint_y: None
+                    height: 40
+                    on_press:
+                        root.add_item('janelas')
+
+                GridLayout:
+                    id: janelas_container
+                    cols: 1
+                    size_hint_y: None
+                    height: self.minimum_height
+                    spacing: 5
+
+            # Divisória IoT_Portas
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: 10
+                id: portas_box
+                canvas.before:
+                    Color:
+                        rgba: .95, .95, .95, 1
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Label:
+                    text: "IoT_Portas"
+                    font_size: 24
+                    size_hint_y: None
+                    height: 40
+                    color: 0.5, 0.5, 0.5, 1 #cinza
+
+                Button:
+                    text: "Adicionar IoT_Porta"
+                    size_hint_y: None
+                    height: 40
+                    on_press:
+                        root.add_item('portas')
+
+                GridLayout:
+                    id: portas_container
+                    cols: 1
+                    size_hint_y: None
+                    height: self.minimum_height
+                    spacing: 5
+
+            # Divisória IoT_Cameras
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint_y: None
+                height: self.minimum_height
+                spacing: 10
+                id: cameras_box
+                canvas.before:
+                    Color:
+                        rgba: .9, .9, .9, 1
+                    Rectangle:
+                        pos: self.pos
+                        size: self.size
+
+                Label:
+                    text: "IoT_Cameras"
+                    font_size: 24
+                    size_hint_y: None
+                    height: 40
+                    color: 0.5, 0.5, 0.5, 1 #cinza
+
+                Button:
+                    text: "Adicionar IoT_Camera"
+                    size_hint_y: None
+                    height: 40
+                    on_press:
+                        root.add_item('cameras')
+
+                GridLayout:
+                    id: cameras_container
+                    cols: 1
+                    size_hint_y: None
+                    height: self.minimum_height
+                    spacing: 5

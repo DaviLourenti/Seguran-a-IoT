@@ -1,0 +1,23 @@
+#:kivy 2.3.0
+
+<ItemWidget>:
+    orientation: 'horizontal'
+    size_hint_y: None
+    height: 40
+    spacing: 10
+    padding: 5
+
+    Label:
+        text: root.text           # Exibe o nome ou descrição do item
+        color: root.text_color     # Define a cor do texto dinamicamente
+        size_hint_x: 0.7
+        size_hint_y: None
+        height: 40
+
+    Button:
+        text: "Ver Detalhes"
+        size_hint_x: 0.3
+        size_hint_y: None
+        height: 40
+        on_press:
+            root.view_details()    # Chama o método para ver os detalhes do item

@@ -1,0 +1,25 @@
+#:kivy 2.3.0
+
+<ItemDetailScreen>:
+    name: 'item_detail'
+
+    BoxLayout:
+        orientation: 'vertical'
+        padding: 20
+        spacing: 20
+
+        Label:
+            id: item_label
+            text: ''
+            font_size: 24
+            size_hint_y: None
+            height: self.texture_size[1]
+
+        Button:
+            text: 'Voltar'
+            size_hint_y: None
+            height: 50
+            on_press:
+                app.root.current = 'main'
+
+        
