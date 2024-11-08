@@ -4,9 +4,9 @@
 # os.environ['KIVY_WINDOW'] = 'mock'
 
 # main.py
-from kivy.app import App
-from kivy.lang import Builder
-from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.app import App # type: ignore
+from kivy.lang import Builder # type: ignore
+from kivy.uix.screenmanager import ScreenManager, Screen # type: ignore
 
 # Definindo a classe WindowManager como o gerenciador de telas
 class WindowManager(ScreenManager):
