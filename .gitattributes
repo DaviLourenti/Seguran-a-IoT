@@ -1,1 +1,0 @@
-ambiente_de_desenvolvimento.tar.gz filter=lfs diff=lfs merge=lfs -text
