@@ -1,3 +1,8 @@
+# import os
+# os.environ['KIVY_METRICS_DENSITY'] = '1'
+# os.environ['KIVY_NO_CONSOLELOG'] = '1'
+# os.environ['KIVY_WINDOW'] = 'mock'
+
 # main.py
 from kivy.app import App
 from kivy.lang import Builder
